@@ -1,0 +1,68 @@
+.advantages{
+  width: 100%;
+  height: 112vh;
+}
+
+.advantages_text{
+  text-align: center;
+  color: #222222;
+
+  h2{
+    padding: 2% 0;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  p{
+    padding: 0 8%;
+    margin-bottom: 15px;
+  }
+}
+
+.advantages_tiles{
+  height: 112px;
+  padding-left: 12%;
+}
+.advantages_icons_icon{
+  height: 80px;
+  width: 80px;
+  margin: 15px 0 0 1%;
+}
+.icon1{
+  @include bacground('../images/train.png');
+}
+.icon2{
+  @include bacground('../images/media.png');
+}
+.icon3{
+  @include bacground('../images/lokalizacja.png');
+}
+.icon4{
+  @include bacground('../images/edukacja.png');
+}
+.icon5{
+  @include bacground('../images/wlasnosc.png');
+}
+.icon6{
+  @include bacground('../images/bezpieczenstwo.png');
+}
+.icon7{
+  @include bacground('../images/sport.png');
+}
+.icon8{
+  @include bacground('../images/oszczednosc.png');
+}
+
+
+.advantages_icons_text{
+  margin: 15px 0 0 1%;
+  line-height: 1.2;
+  padding-right:10%;
+  h2{
+    color: #e50a34;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.4;
+    text-transform: uppercase;
+
+  }
+}

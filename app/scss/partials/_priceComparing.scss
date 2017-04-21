@@ -1,0 +1,79 @@
+.price_comparision{
+  background: #f1f1f1;
+  height: 163vh;
+  a{
+    display: block;
+    margin: 25px auto 0 auto;
+    text-align: center;
+    color: #3277e9;
+    text-decoration: none;
+    line-height: inherit;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+}
+.price_comparing_title{
+
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  h3{
+    padding:25px 0;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #000;
+  }
+}
+.price_comparing_info{
+  display: block;
+  width: 100%;
+  padding: 0 18%;
+  height: 5vh;
+  margin-top: 35px;
+  text-align: center;
+
+}
+.price_comparing_table{
+  height: 90vh;
+  width: 100%;
+
+  table{
+    width: 100%;
+    text-align: center;
+  }
+  tr{
+    height: 50px;
+  }
+  tr:hover{
+    background:#AAAAAA;
+  }
+  th{
+    background:#e50a34;
+    color:#fff;
+    height: 60px;
+    width: 25%;
+
+  }
+  tr:nth-child(3){
+    font-size: 1.2rem;
+  }
+  td{
+    border-top:1px solid #AAAAAA;
+    margin: 0;
+  }
+  td:nth-child(2){
+    background: #cbcbcb;
+    margin: 0;
+  }
+}
+.td_red{
+  color: #e50a34;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.red{
+  color: #e50a34;
+}

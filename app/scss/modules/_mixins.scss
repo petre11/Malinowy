@@ -1,0 +1,6 @@
+@mixin bacground($source) {
+  background-image: url($source);
+  background-repeat:no-repeat;
+  background-position: top center;
+  background-size: cover;
+}

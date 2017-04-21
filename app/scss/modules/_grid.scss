@@ -1,0 +1,88 @@
+$tablet-width: 768px;
+$desktop-width: 1366px;
+$columnNo: 12;
+$gutter: 20px;
+
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+.container {
+	width: 100%;
+	max-width: 1366px;
+	font-family: 'Lato', sans-serif;
+}
+
+.row:before,
+.row:after {
+	content: '';
+	clear: both;
+	display: block;
+}
+
+[class*=col-]{
+	float: left;
+	padding: 0 $gutter;
+
+	&.collapsed {
+		padding: 0;
+	}
+}
+
+@for $i from 1 through $columnNo {
+	.col-sm-#{$i} {
+		width: 100/$columnNo * $i + %;
+	}
+}
+
+@include tablet {
+	@for $i from 1 through $columnNo {
+		.col-md-#{$i} {
+			width: 100/$columnNo * $i + %;
+		}
+	}
+}
+
+@include desktop {
+	@for $i from 1 through $columnNo {
+		.col-lg-#{$i} {
+			width: 100/$columnNo * $i + %;
+		}
+	}
+}
+
+.stripe {
+	background-color: blue;
+	min-height: 2rem;
+	margin: 5px 0;
+}
+
+.sidebar {
+	background-color: cyan;
+	min-height: 100px;
+}
+.header {
+	display: flex;
+	justify-content: space-between;
+	background-color: #f1f1f1;
+	min-height: 92px;
+	border-bottom: 2px solid #9d9d9d;
+}
+
+.footer {
+	background-color: #000;
+	min-height: 50px;
+}
