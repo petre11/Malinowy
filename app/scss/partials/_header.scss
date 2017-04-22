@@ -1,22 +1,110 @@
-ul{
-  float: right;
-  margin: 3.4% 10.6% 0 0;
+@import "modules/mixins";
+
+.header{
+  position: fixed;
+}
+.logo{
+  background-image: url('../images/logo.svg');
+  background-repeat:no-repeat;
+  background-position: center center;
+  background-size: 120px 50px;
+
+  @media(max-width: 1020px){
+  padding:0!important;
+
+  transition:0.35s ease-in;
+  }
+}
+
+.nav{
+  margin-top:35px;
+  padding-left: 15%;
+
+  @media(max-width: 1020px){
+  padding-left:20px;
+
+  transition:0.35s ease-in;
+}
+ul.main{
+  @media(max-width: 768px){
+  display: none;
+  }
 }
 li{
   display: inline-block;
   margin-right: 15px;
-  font-size: 0.875rem;
+  font-size: 1.4rem;
   color: #000;
   list-style: none;
   font-family: 'Lato', sans-serif;
 }
+.hamburger_box{
+  display: none;
+  @media(max-width: 768px){
+  display: block;
+  }
+  }
 
-.logo{
-  width: 120px;
-  height: 50px;
-  margin: 1.2% 0 0 9.1%;
-  background-image: url('../images/logo.svg');
-background-repeat:no-repeat;
-background-position: top center;
-background-size: contain;
+  .hamburger{
+    background:none;
+    position:absolute;
+    top:0;
+    right:0;
+    line-height:45px;
+    padding:25px 50px 0px 30px;
+    color:#999;
+    border:0;
+    font-size:3rem;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:100;
+  }
+  .cross{
+    display: none;
+    background:none;
+    position:absolute;
+    top:0px;
+    right:0;
+    padding:25px 50px 0px 30px;
+    color:#999;
+    border:0;
+    font-size:6rem;
+    line-height:65px;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+    z-index:100;
+  }
+  .mobile_menu{
+    background: #fff;
+    display: block;
+    overflow-y: auto;
+    height: 100vh;
+    position: fixed;
+    top: 92px;
+    left: -360px;
+    width: 360px;
+    z-index: 101;
+    // padding: 0 1.25rem 1.25rem;
+    will-change: left;
+    transition: left 0.35s ease-in;
+   ul{
+     float: right;
+     width: 350px;
+     margin:0 auto;
+     padding:0;
+     list-style-type:none;
+   }
+    li{
+      font-size:1.3rem;
+      padding:3% 5%;
+      border-bottom: 1px solid #cbcbcb;
+      display: block;
+      width: 300px;
+      margin: 0 auto;
+      cursor:pointer;
+      position: relative;
+    }
+  }
 }

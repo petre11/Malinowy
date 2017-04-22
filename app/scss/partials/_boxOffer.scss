@@ -2,9 +2,6 @@
 .offer{
   height: 90vh;
 }
-// .box1,.box2,.box3{
-//   height: 80vh;
-// }
 %box_image{
   width: 95%;
   height: 50%;
@@ -14,13 +11,13 @@
   h3{
     font-weight: 600;
     text-align: center;
-    color:#d8d8d8;
-    font-size: 1.125rem;
+    color:#000;
+    font-size: 1.9rem;
     margin: 0 10% 10px 10%;
   }
   p{
     color: #333333;
-    font-size: 0.875rem;
+    font-size: 1.35rem;
     text-align: center;
     margin: 0 7% 20px 7%;
   }
@@ -33,7 +30,7 @@
     line-height: inherit;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.875rem;
+    font-size: 1.35rem;
   }
 }
 .box1{
