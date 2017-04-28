@@ -1,6 +1,5 @@
 .slider{
   width: 100%;
-  position: relative;
 }
 .slider_images{
   width: 100%;
@@ -8,6 +7,9 @@
   margin-top: 90px;
   object-fit: contain;
   padding: 0;
+  @media(max-width:768px){
+  margin-top:60px;
+  }
 }
 
 .slider_text{
@@ -18,7 +20,7 @@
   z-index: 10;
   @media(max-width:950px){
     top:35vh;
-    width: 50%;
+    // width: 50%;
   }
 
   h1{
@@ -27,6 +29,10 @@
     text-transform: uppercase;
     text-align: center;
     color:#fff;
+
+    @media(min-width: 768px){
+      font-size: 3rem;
+    }
 
   }
 }

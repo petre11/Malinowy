@@ -8,12 +8,12 @@ html{
 font-size: 62.5%;
 
   @media(max-width: 1200px){
-  font-size: 55%;
+  font-size: 62.5%;
 
   transition:0.35s ease-in;
   }
   @media(max-width: 1020px){
-  font-size: 44%;
+  font-size: 62.5%;
 
   transition:0.35s ease-in;
   }
@@ -31,7 +31,8 @@ font-size: 62.5%;
   h3 {
     font-size: 1.8rem; }
   p,a,span{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.375em;
   }
   li{
     font-size: 1.5rem;

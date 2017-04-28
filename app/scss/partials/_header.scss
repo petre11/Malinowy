@@ -1,47 +1,74 @@
 @import "modules/mixins";
-
 .header{
   position: fixed;
-
   display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #9d9d9d;
+  background-color: #f1f1f1;
 
   width: 100%;
-
+  height: 90px;
   color: #000;
-  // transition:0.35s ease-in;
-
+  z-index: 100;
+  @media(max-width:1020px){
+    flex-direction: column;
+    align-items: center;
+    height:125px;
+  }
+  @media(max-width:768px){
+    align-items:stretch;
+    height: 66px;
+  }
 }
 .logo{
-  background-image: url('../images/logo.svg');
-  background-repeat:no-repeat;
-  background-position: center center;
-  background-size: 120px 50px;
+  img{
+    width: 120px;
+    height: 50px;
+    margin: 15px 0 0 65%;
+    cursor:pointer;
+    @media(max-width:1020px){
+    margin:15px auto;
+    }
+    @media(max-width:768px){
+      width:90px;
+      height:40px;
+      margin: 12px 0 0 11px;    }
+  }
+
 }
 
 .nav{
-  margin-top:37px;
-  padding-left: 15%;
-
-  @media(max-width:1100px){
-    padding-left: 10%;
-
+  padding-left:26%;
+  @media(max-width:1020px){
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    padding:0%;
   }
-  @media(max-width:900px){
-    padding-left: 0%;
-
+  @media(max-width:1120px){
+    padding-left:10%;
+  }
+  @media(max-width:1020px){
+    padding-left:0;
   }
 
 .main_menu{
+  padding:0;
+
   @media(max-width: 768px){
   display: none;
   }
-}
 li{
   display: inline-block;
-
-  margin-right: 15px;
-
+  font-size:1.4rem;
+  padding:4.8% 1.1%;
   list-style: none;
+  height: 90px;
+}
+  @media(max-width:768px){
+    padding:2% 1%;
+    height: 50px;
+  }
 }
 .hamburger_buttons{
   display: none;
@@ -52,11 +79,11 @@ li{
 
 .hamburger_button{
   position:absolute;
-  z-index:100;
+  z-index:900;
   top:0;
   right:0;
 
-  padding:25px 50px 0px 30px;
+  padding:12px 30px;
 
   cursor:pointer;
 
@@ -64,7 +91,7 @@ li{
   outline:none;
   background:none;
 
-  font-size:6rem;
+  font-size:26px;
   font-weight:bold;
   line-height:45px;
   }
@@ -76,7 +103,7 @@ li{
 
   display: none;
 
-  padding:25px 50px 0px 30px;
+  padding:10px 50px 0px 30px;
 
   cursor:pointer;
 
