@@ -140,7 +140,7 @@ html {
       font-size: 40%;
       transition: 0.35s ease-in; } }
   html h1 {
-    font-size: 3.7rem; }
+    font-size: 3.5rem; }
   html h2 {
     font-size: 2.2rem; }
   html h3 {
@@ -152,7 +152,6 @@ html {
     font-size: 1.5rem; }
 
 .header {
-  position: fixed;
   display: flex;
   flex-direction: row;
   border-bottom: 2px solid #9d9d9d;
@@ -165,7 +164,8 @@ html {
     .header {
       flex-direction: column;
       align-items: center;
-      height: 125px; } }
+      height: 125px;
+      padding-bottom: 15px; } }
   @media (max-width: 768px) {
     .header {
       align-items: stretch;
@@ -277,31 +277,36 @@ html {
 .slider_images {
   width: 100%;
   max-height: 506px;
-  margin-top: 90px;
   object-fit: contain;
   padding: 0; }
-  @media (max-width: 768px) {
-    .slider_images {
-      margin-top: 60px; } }
 
 .slider_text {
-  width: 45%;
+  width: 100%;
+  height: 10vw;
   position: absolute;
-  top: 45vh;
-  margin-left: 5%;
+  margin: 15% 0 0 5%;
   z-index: 10; }
-  @media (max-width: 950px) {
+  @media (max-width: 1020px) {
     .slider_text {
-      top: 35vh; } }
+      margin: 15% 0 0 15%; } }
   .slider_text h1 {
     font-weight: 400;
-    text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.65);
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.85);
     text-transform: uppercase;
-    text-align: center;
-    color: #fff; }
-    @media (min-width: 768px) {
+    letter-spacing: 0.05rem;
+    text-align: left;
+    color: #fff;
+    line-height: 5rem; }
+    @media (max-width: 1020px) {
       .slider_text h1 {
-        font-size: 3rem; } }
+        font-size: 3rem;
+        line-height: 4rem; } }
+    @media (max-width: 480px) {
+      .slider_text h1 {
+        font-size: 2rem; } }
+
+.offer {
+  padding-bottom: 35px; }
 
 .box1 .box_image, .box2 .box_image, .box3 .box_image {
   display: block;
@@ -359,64 +364,88 @@ html {
   border: 2px solid #d8d8d8; }
 
 .price_comparision {
-  background: #f1f1f1;
-  height: 155vh;
-  margin-bottom: 10px; }
+  padding-bottom: 350px;
+  display: flex;
+  flex-direction: column;
+  background: #f1f1f1; }
+  @media (max-width: 768px) {
+    .price_comparision {
+      padding-bottom: 980px; } }
   .price_comparision a {
     display: block;
-    margin: 25px auto 0 auto;
-    text-align: center;
-    color: #3277e9;
-    text-decoration: none;
-    line-height: inherit;
+    margin: 25px auto 0;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: #3277e9;
+    font-size: 1.8rem;
     font-weight: 400;
-    font-size: 1.8rem; }
+    line-height: inherit; }
 
 .price_comparing_title {
-  height: 10vh;
   width: 100%;
-  text-align: center;
-  margin-bottom: 30px; }
+  height: 10vh;
+  margin-bottom: 30px;
+  text-align: center; }
   .price_comparing_title h3 {
     padding: 25px 0;
+    color: #000;
     font-size: 3rem;
-    font-weight: 400;
-    color: #000; }
+    font-weight: 400; }
 
 .price_comparing_info {
   display: block;
   width: 100%;
-  padding: 0 18%;
-  height: 5vh;
   margin-top: 35px;
+  padding: 0 18%;
   text-align: center;
   font-size: 1.5rem; }
+  @media (max-width: 768px) {
+    .price_comparing_info {
+      font-size: 2rem;
+      padding: 0 5%; } }
 
 .price_comparing_table {
-  height: 90vh;
-  width: 100%; }
+  width: 100%;
+  height: 90vh; }
+  .price_comparing_table .table_mobile {
+    display: none; }
+    @media (max-width: 768px) {
+      .price_comparing_table .table_mobile {
+        display: block;
+        box-sizing: border-box;
+        font-size: 2rem;
+        font-size: 2.2rem; }
+        .price_comparing_table .table_mobile tr:nth-child(odd) {
+          background: #dfdfdf; }
+        .price_comparing_table .table_mobile tr:nth-child(even) td:nth-child(1) {
+          background: #cbcbcb; } }
+  .price_comparing_table .table_desktop {
+    display: block; }
+    @media (max-width: 768px) {
+      .price_comparing_table .table_desktop {
+        display: none; } }
+    .price_comparing_table .table_desktop tr:nth-child(3) {
+      font-size: 2rem; }
+    .price_comparing_table .table_desktop td {
+      margin: 0;
+      border-top: 1px solid #AAAAAA; }
+    .price_comparing_table .table_desktop td:nth-child(2) {
+      margin: 0;
+      background: #cbcbcb; }
+    .price_comparing_table .table_desktop tr:hover {
+      background: #AAAAAA; }
   .price_comparing_table table {
     width: 100%;
-    font-size: 1.5rem;
-    text-align: center; }
+    text-align: center;
+    font-size: 1.5rem; }
   .price_comparing_table tr {
     height: 50px; }
-  .price_comparing_table tr:hover {
-    background: #AAAAAA; }
   .price_comparing_table th {
-    background: #e50a34;
+    width: 25%;
+    height: 50px;
     color: #fff;
-    height: 60px;
-    width: 25%; }
-  .price_comparing_table tr:nth-child(3) {
-    font-size: 2rem; }
-  .price_comparing_table td {
-    border-top: 1px solid #AAAAAA;
-    margin: 0; }
-  .price_comparing_table td:nth-child(2) {
-    background: #cbcbcb;
-    margin: 0; }
+    background: #e50a34; }
 
 .td_red {
   color: #e50a34;
@@ -425,10 +454,13 @@ html {
 
 .red {
   color: #e50a34; }
+  @media (max-width: 768px) {
+    .red {
+      font-size: 2rem; } }
 
 .advantages {
   width: 100%;
-  height: 112vh;
+  padding-bottom: 25px;
   font-size: 1.5rem; }
 
 .advantages_text {
@@ -443,13 +475,21 @@ html {
     margin-bottom: 15px; }
 
 .advantages_tiles {
-  height: 112px;
-  padding-left: 12%; }
+  padding: 2% 0 2% 17%; }
+  @media (max-width: 768px) {
+    .advantages_tiles {
+      padding-left: 0;
+      width: 100%; } }
 
 .advantages_icons_icon {
   height: 80px;
   width: 80px;
   margin: 15px 0 0 1%; }
+  @media (max-width: 768px) {
+    .advantages_icons_icon {
+      width: 45px;
+      height: 45px;
+      margin: 20px 0 0 1%; } }
 
 .icon1 {
   background-image: url("../images/train.png");
@@ -503,50 +543,87 @@ html {
   margin: 15px 0 0 1%;
   line-height: 1.2;
   padding-right: 10%; }
+  @media (max-width: 768px) {
+    .advantages_icons_text {
+      padding-right: 0; } }
   .advantages_icons_text h2 {
     color: #e50a34;
     font-size: 2rem;
     font-weight: 400;
     line-height: 1.4;
     text-transform: uppercase; }
+    @media (max-width: 768px) {
+      .advantages_icons_text h2 {
+        font-size: 2.5rem; } }
+  @media (max-width: 768px) {
+    .advantages_icons_text p {
+      font-size: 2rem; } }
 
 .contact {
   width: 100%;
-  height: 22vh;
+  margin-bottom: 20px;
   background: #f1f1f1;
   font-size: 1.5rem; }
 
-.contact_text {
+.contact_texts {
   margin-top: 25px;
-  text-align: center; }
-  .contact_text h1 {
+  text-align: center;
+  font-size: 2rem; }
+  .contact_texts h1 {
     font-weight: 400;
     font-size: 3rem;
     line-height: 1.4; }
+  .contact_texts .contact_text {
+    padding: 5px 0; }
+    .contact_texts .contact_text span {
+      font-size: 2rem; }
+    .contact_texts .contact_text a {
+      text-decoration: none;
+      font-size: 2rem; }
+    .contact_texts .contact_text .iconPhone::before {
+      content: url("../images/phone_small.png");
+      display: inline-block;
+      padding-right: 10px;
+      height: 20px;
+      width: 20px; }
+    .contact_texts .contact_text .iconMail::before {
+      content: url("../images/mail_small.png");
+      display: inline-block;
+      object-fit: contain;
+      padding-right: 10px;
+      height: 20px;
+      width: 20px; }
 
 .terms {
   width: 100%;
-  height: 45vh;
-  margin-top: 20px; }
+  margin-top: 40px; }
 
-.terms_newsletter span {
-  font-size: 1.3rem; }
-
-.terms_newsletter h2 {
-  font-size: 2rem;
-  font-weight: 400; }
+.terms_newsletter .terms_newsletter_text {
+  padding-left: 16%; }
+  @media (max-width: 768px) {
+    .terms_newsletter .terms_newsletter_text {
+      padding-left: 3%; } }
+  .terms_newsletter .terms_newsletter_text span {
+    font-size: 1.3rem; }
+    @media (max-width: 768px) {
+      .terms_newsletter .terms_newsletter_text span {
+        font-size: 2.1rem; } }
+  .terms_newsletter .terms_newsletter_text h2 {
+    font-size: 2rem;
+    font-weight: 400; }
+    @media (max-width: 768px) {
+      .terms_newsletter .terms_newsletter_text h2 {
+        font-size: 2.5rem; } }
 
 .terms_newsletter input[type=text] {
-  display: block;
+  display: inline-block;
   width: 100%;
-  margin: 3.5rem 0 1rem;
+  margin: 35px 0 0;
   padding: 0 0.5rem;
-  font-size: 0.8125rem;
-  background-color: transparent;
+  font-size: 2rem;
   border: 1px solid #000;
   line-height: 32px;
   height: 32px;
-  box-shadow: none;
   color: #000; }
 
 .terms_newsletter input[type=submit] {
@@ -562,20 +639,29 @@ html {
   border-radius: 2px;
   transition: all 0.25s ease;
   cursor: pointer; }
+  @media (max-width: 768px) {
+    .terms_newsletter input[type=submit] {
+      font-size: 2rem; } }
   .terms_newsletter input[type=submit]:hover {
     background-color: #ab1e31; }
 
-.terms_acceptance {
+.terms_acceptances {
   margin-top: 20px;
   font-size: 1.35rem; }
+  .terms_acceptances .terms_acceptance_input {
+    padding-left: 15%; }
+
+.terms_acceptance {
+  display: flex;
+  flex-direction: row;
+  margin: 1% 0; }
   .terms_acceptance input[type=checkbox] {
-    display: block;
-    float: left;
     width: 16px;
-    height: 16px; }
-  .terms_acceptance span {
-    display: block;
-    float: left; }
+    height: 16px;
+    padding-left: 25%; }
+  .terms_acceptance .terms_acceptance_text {
+    padding: 0 25% 0 0;
+    line-height: 2rem; }
 
 .footer {
   width: 100%;
