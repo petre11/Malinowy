@@ -5,13 +5,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
   var cross = document.querySelector('.cross');
   var hamburger_menu = document.querySelector('.mobile_menu');
   var mobile_menu = document.querySelector('.mobile_menu');
+  var shadow = document.querySelector('.shadow');
 
     hamburger_button.addEventListener('click', function() {
         hamburger_menu.style.left = "0%";
         hamburger_button.style.display= "none";
         cross.style.display ="block";
-        mobile_menu.style.boxShadow ="300px 0px 0px 0px rgba(60,60,60,0.6)";
-
+        shadow.style.visibility = "visible"
     });
 
     cross.addEventListener('click', function() {
@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         hamburger_button.style.display= "block";
         cross.style.display="none"
         mobile_menu.style.boxShadow ="none";
+        shadow.style.visibility = "hidden"
 
     });
 

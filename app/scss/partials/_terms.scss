@@ -9,9 +9,9 @@
       padding-left:3%;
     }
     span{
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       @media(max-width:768px){
-      font-size: 2.1rem;
+      font-size: 2.6rem;
       }
     }
     h2{
@@ -58,12 +58,11 @@
 
 .terms_acceptances{
     margin-top: 20px;
-    font-size: 1.35rem;
     .terms_acceptance_input{
-      padding-left: 15%;
-      // @media(max-width:1020px){
-      //   padding-left:8%;
-      // }
+      padding:2px 0 0 15%;
+      @media(max-width:768px){
+        padding:0;
+      }
     }
 }
 
@@ -74,10 +73,14 @@
   input[type=checkbox]{
     width: 16px;
     height: 16px;
-    padding-left: 25%;
   }
   .terms_acceptance_text{
-    padding:0 25% 0 0;
+    padding:0 25% 0 1%;
     line-height:2rem;
+    font-size: 1.3rem;
+    @media(max-width:768px){
+      padding:0 0 5% 1%;
+      font-size: 2rem;
+    }
   }
 }

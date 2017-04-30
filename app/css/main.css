@@ -1,7 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  transition: 0.35s ease-in; }
+  margin: 0; }
 
 .container {
   width: 100%;
@@ -151,25 +150,79 @@ html {
   html li {
     font-size: 1.5rem; }
 
+.phone_icons {
+  position: fixed;
+  z-index: 100;
+  top: 370px;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  transition: all 0.25s ease-in-out;
+  opacity: 0.6;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-image: url("../images/phone_big.png");
+  background-repeat: no-repeat;
+  background-position: center center; }
+  @media (max-width: 768px) {
+    .phone_icons {
+      display: none; } }
+  .phone_icons:hover {
+    opacity: 1; }
+
+.mail_icons {
+  position: fixed;
+  z-index: 100;
+  top: 460px;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  transition: all 0.25s ease-in-out;
+  opacity: 0.6;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-image: url("../images/mail.png");
+  background-repeat: no-repeat;
+  background-position: center center; }
+  @media (max-width: 768px) {
+    .mail_icons {
+      display: none; } }
+  .mail_icons:hover {
+    opacity: 1; }
+
+.shadow {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.55s ease-in-out, visibility 0.25s ease-in-out;
+  opacity: 0.6;
+  background: #000; }
+
+.header_space {
+  width: 100%;
+  height: 66px; }
+
 .header {
+  position: fixed;
+  z-index: 202;
   display: flex;
   flex-direction: row;
-  border-bottom: 2px solid #9d9d9d;
-  background-color: #f1f1f1;
   width: 100%;
   height: 90px;
-  color: #000;
-  z-index: 100; }
+  border-bottom: 2px solid #9d9d9d;
+  background-color: #f1f1f1; }
   @media (max-width: 1020px) {
     .header {
       flex-direction: column;
-      align-items: center;
       height: 125px;
-      padding-bottom: 15px; } }
+      padding-bottom: 15px;
+      align-items: center; } }
   @media (max-width: 768px) {
     .header {
-      align-items: stretch;
-      height: 66px; } }
+      height: 66px;
+      align-items: stretch; } }
 
 .logo img {
   width: 120px;
@@ -186,13 +239,13 @@ html {
       margin: 12px 0 0 11px; } }
 
 .nav {
-  padding-left: 26%; }
+  padding-left: 20%; }
   @media (max-width: 1020px) {
     .nav {
-      margin: 0;
       width: 100%;
-      text-align: center;
-      padding: 0%; } }
+      margin: 0;
+      padding: 0%;
+      text-align: center; } }
   @media (max-width: 1120px) {
     .nav {
       padding-left: 10%; } }
@@ -200,20 +253,55 @@ html {
     .nav {
       padding-left: 0; } }
   .nav .main_menu {
-    padding: 0; }
+    width: 100%;
+    margin: 30px 0 0 40px; }
     @media (max-width: 768px) {
       .nav .main_menu {
         display: none; } }
     .nav .main_menu li {
       display: inline-block;
-      font-size: 1.4rem;
-      padding: 4.8% 1.1%;
+      padding: 5px 5px 0 0;
       list-style: none;
-      height: 90px; }
+      font-size: 1.4rem; }
+      .nav .main_menu li:hover .main_menu_sub {
+        position: absolute;
+        display: block; }
+      .nav .main_menu li a {
+        margin-right: 5px;
+        padding: 25px 5px;
+        cursor: pointer;
+        vertical-align: text-center;
+        text-decoration: none;
+        color: #000; }
     @media (max-width: 768px) {
       .nav .main_menu {
-        padding: 2% 1%;
-        height: 50px; } }
+        height: 50px;
+        padding: 2% 1%; } }
+    .nav .main_menu .main_menu_sub {
+      position: relative;
+      z-index: 100;
+      display: none;
+      margin: 20px 0 0;
+      padding: 0;
+      background-color: #e50a34; }
+      .nav .main_menu .main_menu_sub:after {
+        position: absolute;
+        top: -10px;
+        left: 15px;
+        content: "";
+        transform: rotate(-45deg);
+        border-right: 20px solid #e50a34;
+        border-bottom: 20px solid transparent; }
+      .nav .main_menu .main_menu_sub li {
+        height: 40px;
+        padding: 10px; }
+        .nav .main_menu .main_menu_sub li:hover {
+          background: #cc2841; }
+        .nav .main_menu .main_menu_sub li a {
+          margin: 0;
+          padding: 10px 0;
+          cursor: pointer;
+          color: #fff; }
   .nav .hamburger_buttons {
     display: none; }
     @media (max-width: 768px) {
@@ -249,14 +337,15 @@ html {
   .nav .mobile_menu {
     position: fixed;
     z-index: 101;
-    top: 92px;
+    top: 66px;
     left: -500px;
     display: block;
     float: right;
-    overflow-y: hidden;
+    overflow-y: auto;
     width: 320px;
-    width: 350px;
-    height: 100vh;
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
     margin: 0 auto;
     padding: 0;
     list-style-type: none;
@@ -265,23 +354,45 @@ html {
     .nav .mobile_menu li {
       position: relative;
       display: block;
-      width: 300px;
+      width: 263px;
       margin: 0 auto;
-      padding: 3% 5%;
       cursor: pointer;
-      border-bottom: 1px solid #cbcbcb; }
+      text-align: left;
+      border-bottom: 1px solid #cbcbcb;
+      font-size: 2rem; }
+    .nav .mobile_menu a {
+      text-align: left;
+      text-decoration: none;
+      color: #000;
+      font-size: 2rem; }
+    .nav .mobile_menu .mobile_submenu {
+      margin: 0;
+      padding: 0;
+      background-color: #e50a34; }
+      .nav .mobile_menu .mobile_submenu li {
+        float: left;
+        margin-left: 0;
+        text-align: left;
+        border-bottom: 1px solid #a31d2e;
+        background-color: #e50a34; }
+        .nav .mobile_menu .mobile_submenu li a {
+          text-align: left;
+          text-decoration: none;
+          color: #fff;
+          font-size: 2rem; }
 
 .slider {
-  width: 100%; }
+  width: 100%;
+  position: relative; }
 
 .slider_images {
-  width: 100%;
+  max-width: 100%;
   max-height: 506px;
   object-fit: contain;
   padding: 0; }
 
 .slider_text {
-  width: 100%;
+  width: 95%;
   height: 10vw;
   position: absolute;
   margin: 15% 0 0 5%;
@@ -364,13 +475,9 @@ html {
   border: 2px solid #d8d8d8; }
 
 .price_comparision {
-  padding-bottom: 350px;
   display: flex;
   flex-direction: column;
   background: #f1f1f1; }
-  @media (max-width: 768px) {
-    .price_comparision {
-      padding-bottom: 980px; } }
   .price_comparision a {
     display: block;
     margin: 25px auto 0;
@@ -604,10 +711,10 @@ html {
     .terms_newsletter .terms_newsletter_text {
       padding-left: 3%; } }
   .terms_newsletter .terms_newsletter_text span {
-    font-size: 1.3rem; }
+    font-size: 1.2rem; }
     @media (max-width: 768px) {
       .terms_newsletter .terms_newsletter_text span {
-        font-size: 2.1rem; } }
+        font-size: 2.6rem; } }
   .terms_newsletter .terms_newsletter_text h2 {
     font-size: 2rem;
     font-weight: 400; }
@@ -646,10 +753,12 @@ html {
     background-color: #ab1e31; }
 
 .terms_acceptances {
-  margin-top: 20px;
-  font-size: 1.35rem; }
+  margin-top: 20px; }
   .terms_acceptances .terms_acceptance_input {
-    padding-left: 15%; }
+    padding: 2px 0 0 15%; }
+    @media (max-width: 768px) {
+      .terms_acceptances .terms_acceptance_input {
+        padding: 0; } }
 
 .terms_acceptance {
   display: flex;
@@ -657,24 +766,32 @@ html {
   margin: 1% 0; }
   .terms_acceptance input[type=checkbox] {
     width: 16px;
-    height: 16px;
-    padding-left: 25%; }
+    height: 16px; }
   .terms_acceptance .terms_acceptance_text {
-    padding: 0 25% 0 0;
-    line-height: 2rem; }
+    padding: 0 25% 0 1%;
+    line-height: 2rem;
+    font-size: 1.3rem; }
+    @media (max-width: 768px) {
+      .terms_acceptance .terms_acceptance_text {
+        padding: 0 0 5% 1%;
+        font-size: 2rem; } }
 
 .footer {
   width: 100%;
-  height: 10vh;
+  height: 60px;
   background-color: #3a3636;
   color: #fff; }
   .footer span {
     display: block;
     float: left;
     font-size: 1.35rem;
-    margin: 25px 0 25px 10%; }
+    padding: 20px 0 0 9%; }
   .footer ul {
     float: right;
-    margin: 25px 10% 0; }
+    margin: 20px 7% 0 0; }
   .footer li {
-    color: #fff; }
+    display: inline-block;
+    color: #fff;
+    list-style: none;
+    padding-right: 20px;
+    font-size: 1.35rem; }
