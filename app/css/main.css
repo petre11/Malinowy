@@ -196,7 +196,7 @@ html {
   visibility: hidden;
   width: 100%;
   height: 100%;
-  transition: opacity 0.55s ease-in-out, visibility 0.25s ease-in-out;
+  transition: .55s ease-out;
   opacity: 0.6;
   background: #000; }
 
@@ -254,21 +254,21 @@ html {
       padding-left: 0; } }
   .nav .main_menu {
     width: 100%;
-    margin: 30px 0 0 40px; }
+    margin: 30px 0 0 20px; }
     @media (max-width: 768px) {
       .nav .main_menu {
         display: none; } }
     .nav .main_menu li {
       display: inline-block;
       padding: 5px 5px 0 0;
-      list-style: none;
-      font-size: 1.4rem; }
+      list-style: none; }
       .nav .main_menu li:hover .main_menu_sub {
         position: absolute;
         display: block; }
       .nav .main_menu li a {
         margin-right: 5px;
         padding: 25px 5px;
+        font-size: 1.4rem;
         cursor: pointer;
         vertical-align: text-center;
         text-decoration: none;
@@ -338,46 +338,64 @@ html {
     position: fixed;
     z-index: 101;
     top: 66px;
-    left: -500px;
+    left: -350px;
     display: block;
-    float: right;
     overflow-y: auto;
-    width: 320px;
-    height: 100%;
-    min-height: 100%;
-    max-height: 100%;
-    margin: 0 auto;
-    padding: 0;
-    list-style-type: none;
+    height: 90vh;
+    padding: 25px 20px;
+    margin: 0;
     transition: left 0.35s ease-in;
     background: #fff; }
     .nav .mobile_menu li {
       position: relative;
-      display: block;
-      width: 263px;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      width: 280px;
+      font-size: 2.6rem;
       cursor: pointer;
       text-align: left;
-      border-bottom: 1px solid #cbcbcb;
-      font-size: 2rem; }
+      border-bottom: 1px solid #cbcbcb; }
+      .nav .mobile_menu li li:first-child {
+        flex-direction: row; }
     .nav .mobile_menu a {
+      display: block;
+      float: left;
+      width: 150px;
+      padding: 12px 0 12px 5px;
       text-align: left;
       text-decoration: none;
       color: #000;
       font-size: 2rem; }
+    .nav .mobile_menu .mobile_menu_add {
+      display: block;
+      position: absolute;
+      top: 5px;
+      right: -85px;
+      width: 100px;
+      color: #777;
+      padding-bottom: 5px;
+      font-weight: 300;
+      font-size: 26px; }
     .nav .mobile_menu .mobile_submenu {
+      display: none;
       margin: 0;
       padding: 0;
+      margin-top: 10px;
       background-color: #e50a34; }
       .nav .mobile_menu .mobile_submenu li {
         float: left;
+        margin: 0;
         margin-left: 0;
         text-align: left;
         border-bottom: 1px solid #a31d2e;
         background-color: #e50a34; }
+        .nav .mobile_menu .mobile_submenu li li:first-child {
+          border-top: 1px solid #cbcbcb; }
         .nav .mobile_menu .mobile_submenu li a {
+          display: block;
           text-align: left;
           text-decoration: none;
+          padding: 10px 0 10px 5px;
           color: #fff;
           font-size: 2rem; }
 
@@ -490,8 +508,6 @@ html {
     line-height: inherit; }
 
 .price_comparing_title {
-  width: 100%;
-  height: 10vh;
   margin-bottom: 30px;
   text-align: center; }
   .price_comparing_title h3 {
@@ -502,7 +518,6 @@ html {
 
 .price_comparing_info {
   display: block;
-  width: 100%;
   margin-top: 35px;
   padding: 0 18%;
   text-align: center;
@@ -512,47 +527,49 @@ html {
       font-size: 2rem;
       padding: 0 5%; } }
 
-.price_comparing_table {
+.price_comparing_table .table_mobile {
+  display: none; }
+  @media (max-width: 768px) {
+    .price_comparing_table .table_mobile {
+      display: block;
+      box-sizing: border-box;
+      font-size: 2rem;
+      font-size: 2.2rem; }
+      .price_comparing_table .table_mobile tr:nth-child(odd) {
+        background: #dfdfdf; }
+      .price_comparing_table .table_mobile tr:nth-child(even) td:nth-child(1) {
+        background: #cbcbcb; } }
+
+.price_comparing_table .table_desktop {
+  display: block;
+  width: 100%; }
+  @media (max-width: 768px) {
+    .price_comparing_table .table_desktop {
+      display: none; } }
+  .price_comparing_table .table_desktop tr:nth-child(3) {
+    font-size: 2rem; }
+  .price_comparing_table .table_desktop td {
+    margin: 0;
+    border-top: 1px solid #AAAAAA; }
+  .price_comparing_table .table_desktop td:nth-child(2) {
+    margin: 0;
+    background: #cbcbcb; }
+  .price_comparing_table .table_desktop tr:hover {
+    background: #AAAAAA; }
+
+.price_comparing_table table {
   width: 100%;
-  height: 90vh; }
-  .price_comparing_table .table_mobile {
-    display: none; }
-    @media (max-width: 768px) {
-      .price_comparing_table .table_mobile {
-        display: block;
-        box-sizing: border-box;
-        font-size: 2rem;
-        font-size: 2.2rem; }
-        .price_comparing_table .table_mobile tr:nth-child(odd) {
-          background: #dfdfdf; }
-        .price_comparing_table .table_mobile tr:nth-child(even) td:nth-child(1) {
-          background: #cbcbcb; } }
-  .price_comparing_table .table_desktop {
-    display: block; }
-    @media (max-width: 768px) {
-      .price_comparing_table .table_desktop {
-        display: none; } }
-    .price_comparing_table .table_desktop tr:nth-child(3) {
-      font-size: 2rem; }
-    .price_comparing_table .table_desktop td {
-      margin: 0;
-      border-top: 1px solid #AAAAAA; }
-    .price_comparing_table .table_desktop td:nth-child(2) {
-      margin: 0;
-      background: #cbcbcb; }
-    .price_comparing_table .table_desktop tr:hover {
-      background: #AAAAAA; }
-  .price_comparing_table table {
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem; }
-  .price_comparing_table tr {
-    height: 50px; }
-  .price_comparing_table th {
-    width: 25%;
-    height: 50px;
-    color: #fff;
-    background: #e50a34; }
+  text-align: center;
+  font-size: 1.5rem; }
+
+.price_comparing_table tr {
+  height: 50px; }
+
+.price_comparing_table th {
+  width: 25%;
+  height: 50px;
+  color: #fff;
+  background: #e50a34; }
 
 .td_red {
   color: #e50a34;
@@ -777,18 +794,26 @@ html {
         font-size: 2rem; } }
 
 .footer {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 60px;
   background-color: #3a3636;
   color: #fff; }
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column; } }
   .footer span {
     display: block;
     float: left;
     font-size: 1.35rem;
     padding: 20px 0 0 9%; }
   .footer ul {
-    float: right;
-    margin: 20px 7% 0 0; }
+    display: block;
+    margin: 20px 0; }
+    @media (max-width: 768px) {
+      .footer ul {
+        clear: both; } }
   .footer li {
     display: inline-block;
     color: #fff;

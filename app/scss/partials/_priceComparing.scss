@@ -1,5 +1,4 @@
 .price_comparision {
-  // margin-bottom: 350px;
   display: flex;
   flex-direction: column;
   background: #f1f1f1;
@@ -25,9 +24,7 @@
 }
 
 .price_comparing_title {
-  width: 100%;
-  height: 10vh;
-  margin-bottom: 30px;
+  margin-bottom: 30px;
 
   text-align: center;
 
@@ -44,8 +41,6 @@
 .price_comparing_info {
   display: block;
 
-  width: 100%;
-  // height: 5vh;
   margin-top: 35px;
   padding: 0 18%;
 
@@ -61,12 +56,7 @@
 
 
 .price_comparing_table {
-  width: 100%;
-  height: 90vh;
-
-
-  .table_mobile {
-    display: none;
+  .table_mobile {    display: none;
     @media(max-width:768px) {
       display: block;
       box-sizing: border-box;
@@ -87,6 +77,8 @@
 
   .table_desktop {
     display: block;
+    width: 100%;
+
     @media(max-width:768px) {
       display: none;
     }

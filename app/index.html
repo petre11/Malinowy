@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/main.css">
   <meta name="viewport" content="width=device-width,initial-scale =1.0">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="JavaScript/script.js"></script>
 </head>
 
 <body>
@@ -27,8 +29,10 @@
           <button class="cross">&#735;</button>
         </div>
         <ul class="mobile_menu">
-          <li><a href="#">Domy</a>
-            <ul class="mobile_submenu">
+          <li><a href="#">Domy
+            <span class="mobile_menu_add" id="mobile_menu_add" >+</span>
+          </a>
+            <ul class="mobile_submenu" id="bekon">
               <li><a href="#">Twój wymarzony dom</a></li>
               <li><a href="#">Plan osiedla</a></li>
               <li><a href="#">Lista domów</a></li>
@@ -36,35 +40,36 @@
             </ul>
           </li>
           <li><a href"#">Lokalizacja</a>
-            <ul class="mobile_submenu">
+            <!-- <ul class="mobile_submenu">
               <li><a href="#">Doskonała lokalizacja</a></li>
               <li><a href="#">Mapa okolicy</a></li>
               <li><a href="#">Zobacz okolicę</a></li>
-            </ul>
+            </ul> -->
           </li>
           <li><a href="">Dojazd</a>
-            <ul class="mobile_submenu">
+            <!-- <ul class="mobile_submenu">
               <li><a href="#">Sposoby dojazdu</a></li>
               <li><a href="#">Doskonała perspektywa</a></li>
-            </ul>
+            </ul> -->
           </li>
-          <li>Galeria</li>
-          <li>Porady</li>
+          <li><a href="#">Galeria</a></li>
+          <li><a href="#">Porady</a></li>
           <li><a href="#">O inwestorze</a>
-            <ul class="mobile_submenu">
+            <!-- <ul class="mobile_submenu">
               <li><a href="#">Inwestor</a></li>
               <li><a href="#">Zrealizowane inswetycje</a></li>
-            </ul>
+            </ul> -->
           </li>
-          <li>Aktualne Promocje</li>
-          <li>Kontakt</li>
+          <li><a href="#">Aktualne Promocje</a></li>
+          <li><a href="#">Kontakt</a></li>
         </ul>
         <ul class="main_menu">
           <li><a href="#">Domy</a>
             <ul class="main_menu_sub">
-              <li><a href="#">Doskonała lokalizacja</a></li>
-              <li><a href="#">Mapa okolicy</a></li>
-              <li><a href="#">Zobacz okolice</a></li>
+              <li><a href="#">Twój wymarzony dom</a></li>
+              <li><a href="#">Plan osiedla</a></li>
+              <li><a href="#">Lista domów</a></li>
+              <li><a href="#">Rzuty domów</a></li>
             </ul>
           </li>
           <li><a href="#">Lokalizacja</a>
@@ -484,15 +489,13 @@
   </div>
   <!-- Footer -->
   <footer class="row footer">
-    <div class="col-sm-12 ">
-      <span>Copyright © 2016 Kerbud. Wszelkie prawa zastrzeżone.</span>
-      <ul>
+      <span class="col-sm-12 col-md-8">Copyright © 2016 Kerbud. Wszelkie prawa zastrzeżone.</span>
+      <ul class="col-sm-12 col-md-4">
         <li>Zasady ochrony prywatności</li>
         <li>Polityka cookie</li>
       </ul>
-    </div>
   </footer>
-  <script src="JavaScript/script.js"></script>
+
 </body>
 
 </html>
