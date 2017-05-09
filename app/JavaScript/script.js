@@ -2,18 +2,13 @@ $(document).ready(function(){
 
 var subMenuBtn = document.querySelectorAll('.mobile_menu_add');
 var button = document.querySelectorAll('.mobile_menu_add');
-
+console.log(button[0])
   for (var i = 0; i < button.length; i++){
 
     button[i].addEventListener('click',function(){
-        $("#bekon").slideToggle(600);
-
-        console.log($(this).parent());
+        $(this).next().slideToggle(300);
     });
   }
-
-
-
 
   var hamburger_button = document.querySelector('.hamburger_button');
   var cross = document.querySelector('.cross');

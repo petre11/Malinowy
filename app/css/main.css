@@ -342,7 +342,7 @@ html {
     display: block;
     overflow-y: auto;
     height: 90vh;
-    padding: 25px 20px;
+    padding: 10px 20px;
     margin: 0;
     transition: left 0.35s ease-in;
     background: #fff; }
@@ -370,8 +370,8 @@ html {
       display: block;
       position: absolute;
       top: 5px;
-      right: -85px;
-      width: 100px;
+      right: 0px;
+      width: 20px;
       color: #777;
       padding-bottom: 5px;
       font-weight: 300;
@@ -495,7 +495,8 @@ html {
 .price_comparision {
   display: flex;
   flex-direction: column;
-  background: #f1f1f1; }
+  background: #f1f1f1;
+  padding-bottom: 15px; }
   .price_comparision a {
     display: block;
     margin: 25px auto 0;
@@ -508,7 +509,6 @@ html {
     line-height: inherit; }
 
 .price_comparing_title {
-  margin-bottom: 30px;
   text-align: center; }
   .price_comparing_title h3 {
     padding: 25px 0;
@@ -566,7 +566,7 @@ html {
   height: 50px; }
 
 .price_comparing_table th {
-  width: 25%;
+  width: 26%;
   height: 50px;
   color: #fff;
   background: #e50a34; }

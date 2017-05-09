@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   background: #f1f1f1;
+  padding-bottom: 15px;
   @media(max-width:768px){
   // padding-bottom:980px;
   }
@@ -24,9 +25,7 @@
 }
 
 .price_comparing_title {
-  margin-bottom: 30px;
-
-  text-align: center;
+  text-align: center;
 
   h3 {
     padding: 25px 0;
@@ -115,7 +114,7 @@
   }
 
   th {
-    width: 25%;
+    width: 26%;
     height: 50px;
 
     color: #fff;
