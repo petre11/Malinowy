@@ -1,6 +1,7 @@
 .slider{
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 .slider_images{
   max-width: 100%;
@@ -8,7 +9,30 @@
   object-fit: contain;
   padding: 0;
 }
+.slider_hide{
+  position: absolute;
+  left:100%;
+}
+.slider_circles{
+  position: absolute;
+  width: 200px;
+  bottom:15px;
+  left:50%;
 
+}
+.circle{
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border:solid 2px #fff;
+  background: #e50a34;
+  margin-right: 10px;
+
+}
+.circle_hide{
+  background: #fff;
+}
 .slider_text{
   width: 95%;
   height: 10vw;
