@@ -861,7 +861,8 @@ html {
   height: 60px;
   background-color: #3a3636;
   color: #fff;
-  text-align: center; }
+  text-align: center;
+  padding: 1.5% 0; }
   @media (max-width: 640px) {
     .footer {
       flex-direction: column-reverse; } }
@@ -877,6 +878,9 @@ html {
     list-style: none;
     padding-right: 20px;
     font-size: 1.35rem; }
-    @media (max-width: 640px) {
-      .footer li {
-        font-size: 1.8rem; } }
+    .footer li a {
+      text-decoration: none;
+      color: #fff; }
+      @media (max-width: 640px) {
+        .footer li a {
+          font-size: 1.8rem; } }
