@@ -1,33 +1,32 @@
 .footer{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
   height: 60px;
   background-color: #3a3636;
   color:#fff;
-  @media(max-width: 768px){
-    flex-direction: column;
+  text-align: center;
+  @media(max-width: 640px){
+    flex-direction: column-reverse;
   }
 
   span{
-    display: block;
-    float: left;
     font-size: 1.35rem;
-    padding:20px 0 0 9%;
+      margin:20px 0 ;
+      @media(max-width:640px){
+        font-size: 1.8rem;
+      }
   }
 
-  ul{
-    display: block;
-    margin:20px 0 ;
-    @media(max-width: 768px){
-      clear: both;
-    }
-  }
   li{
     display: inline-block;
     color:#fff;
     list-style: none;
     padding-right:20px;
     font-size: 1.35rem;
+    @media(max-width:640px){
+      font-size: 1.8rem;
+    }
   }
 }

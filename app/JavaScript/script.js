@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-//fold mobile sub mneu
+//Folding mobile sub menu
 var subMenuBtn = document.querySelectorAll('.mobile_menu_add');
 var button = document.querySelectorAll('.mobile_menu_add');
   for (var i = 0; i < button.length; i++){
@@ -10,7 +10,7 @@ var button = document.querySelectorAll('.mobile_menu_add');
     });
   }
 
-//slider
+//Slider
   var circle1 = document.querySelector('#circle1');
   var circle2 = document.querySelector('#circle2');
   var sliderCircles = document.querySelectorAll('.circle')
