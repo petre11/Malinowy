@@ -75,5 +75,9 @@
   min-height: 505px;
   margin-top: 20px;
   border: 2px solid #d8d8d8;
-
+  @media(max-width:768px){
+    display:flex;
+    flex-direction: column;
+      min-height: 400px;
+  }
 }
