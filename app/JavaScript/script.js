@@ -42,14 +42,19 @@ $(document).ready(function() {
   });
 
   //Switch to RWD menu
-  var burgerMenu = $('.burgerMenu');
-  var mobile_menu = $('.mobile_menu');
-  var shadow = $('.shadow');
+  let burgerMenu = $('.burgerMenu');
+  let mobile_menu = $('.mobile_menu');
+  let shadow = $('.shadow');
 
   burgerMenu.click(function() {
     $(this).toggleClass('rwd');
     mobile_menu.toggleClass('mobile_menu_hide mobile_menu_visible');
     shadow.toggleClass('shadow_hide shadow_visible');
+  });
+  shadow.click(function() {
+    burgerMenu.toggleClass('rwd');
+    mobile_menu.toggleClass('mobile_menu_hide mobile_menu_visible');
+    $(this).toggleClass('shadow_hide shadow_visible');
   });
 
 });
