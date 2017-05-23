@@ -11,15 +11,16 @@ $(document).ready(function() {
   }
 
   //Slider
-  let SlideToggle = (element, classEl1, classEl2) => {
+   SlideToggle = (element, classEl1, classEl2) => {
     element.classList.remove(classEl1);
     element.classList.add(classEl2);
   };
 
-  let CircleToogle = (element1, element2, classEl) => {
+   CircleToogle = (element1, element2, classEl) => {
     element1.classList.add(classEl);
     element2.classList.remove(classEl)
   };
+
 
   let circle1 = document.querySelector('#circle1');
   let circle2 = document.querySelector('#circle2');
@@ -27,14 +28,19 @@ $(document).ready(function() {
   let slideWrapper = document.querySelector('#slideWrapper');
 
   circle1.addEventListener('click', function() {
+    circle1.style.animation = 'none';
+    circle2.style.animation = 'none';
     CircleToogle(circle2, circle1, 'circle_hide');
     SlideToggle(slideWrapper, 'slideRight', 'slideLeft');
   });
 
   circle2.addEventListener('click', function() {
+    circle1.style.animation = 'none';
+    circle2.style.animation = 'none';
     CircleToogle(circle1, circle2, 'circle_hide');
     SlideToggle(slideWrapper, 'slideLeft', 'slideRight');
   });
+
   //Switch to RWD menu
   var burgerMenu = $('.burgerMenu');
   var mobile_menu = $('.mobile_menu');

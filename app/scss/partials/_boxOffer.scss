@@ -75,6 +75,9 @@
   min-height: 505px;
   margin-top: 20px;
   border: 2px solid #d8d8d8;
+  @media(min-width: 1360px){
+    height: 590px;
+  }
   @media(max-width:768px){
     display:flex;
     flex-direction: column;

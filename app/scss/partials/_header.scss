@@ -70,6 +70,9 @@
 .header_space{
   width: 100%;
   height: 86px;
+  @media(min-width:1366px){
+    width: 1366px;
+  }
   @media(max-width: 1020px){
     height: 126px;
   }
@@ -89,6 +92,9 @@
 
   border-bottom: 2px solid #9d9d9d;
   background-color: #f1f1f1;
+  @media(min-width:1366px){
+    width: 1366px;
+  }
   @media(max-width:1020px){
     flex-direction: column;
 
@@ -124,6 +130,9 @@
 
 .nav{
   padding-left:18%;
+  @media(min-width:1366px){
+    padding-left:25%;
+  }
   @media(max-width:1020px){
     width: 100%;
     margin: 0;

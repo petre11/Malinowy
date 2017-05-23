@@ -1,0 +1,52 @@
+@keyframes sliderInrerva{
+  0%{
+    right:0%;
+  }
+  10%{
+    right:100%;
+  }
+  50%{
+  right:100%;
+  }
+  60%{
+  right:0%;
+  }
+  100%{
+  right:0%;
+  }
+}
+
+@keyframes changeToRed{
+  0%{
+    background: #fff;
+  }
+  1%{
+    background: #e50a34;
+  }
+  50%{
+    background: #e50a34;
+  }
+  51%{
+    background: #fff;
+  }
+  100%{
+    background: #fff;
+  }
+}
+@keyframes changeToWhite{
+  0%{
+    background: #e50a34;
+  }
+  1%{
+    background: #fff;
+  }
+  50%{
+    background: #fff;
+  }
+  51%{
+    background: #e50a34;
+  }
+  100%{
+    background: #e50a34;
+  }
+}

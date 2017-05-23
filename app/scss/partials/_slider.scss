@@ -5,7 +5,7 @@
   position: relative;
 }
 .slideWraper{
-
+  animation:  sliderInrerva 10s  ease-in-out 5s infinite;
   position: relative;
 
 }
@@ -52,7 +52,12 @@
   z-index: 200;
 
 }
-
+#circle1{
+  animation:  changeToWhite 10s  ease-in-out 5s infinite;
+}
+#circle2{
+  animation:  changeToRed 10s  ease-in-out 5s infinite;
+}
 .circle{
   display: inline-block;
   width: 16px;
